@@ -47,3 +47,34 @@ imprimeNome(meuNome);
 > node imprime-nome.js
 > Olá meu nome é Gabriel Fanto
 ```
+
+### Terceiro Exemplo
+
+* Agora iremos testar como instalar pacotes
+* para instalar pacotes usamos o comando **NPM**
+* vou testar o pacote _cli-color_ que serve para colorir a saida do programa
+* Para baixar o pacote no diretório de seu projeto use o seguinte comando:
+
+```shell
+> sudo npm install cli-color
+```
+
+* A saida deve ser mais ou menos assim:
+<img src="images/npm.png">
+
+* Agora que foi baixado o pacote no diretório do programa, vou chamar o pacote no meu arquivo
+* o nome do arquivo de teste é `teste-pacote-cli-color.js`
+* para chamar o pacote em uma Variável coloque o seguinte comando
+
+```javascript
+let color = require("cli-color");
+```
+
+* Agora temos o nosso pacote chamado em nosso arquivo de código, agora podemos usar ele como nos exemplos abaixo:
+
+```javascript
+console.log(color.yellow("Mensagem em Amarelo!"));
+console.log(color.green("Mensagem em Verde!"));
+console.log(color.blue("Mensagem em Azul!"));
+console.log(color.red("Mensagem em Vermelho!"));
+```
