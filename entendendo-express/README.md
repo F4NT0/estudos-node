@@ -120,3 +120,43 @@ app.get("/",function(req,res){
 ```
 
 Essa Função _sendfile_ vai enviar um arquivo estático HTML para aparecer na página definida.
+
+### Enviando mais de um Arquivo
+
+Agora vamos utilizar outras duas Funções para carregarmos mais arquivos com o express, onde temos as seguintes funções:
+
+**Função static**
+
+Essa Função serve para dizermos qual Diretório interno de nosso Projeto possui os Arwuivos estáticos desejados
+
+**Função use**
+
+Essa Função serve para dizermos ao express qual arquivos desejamos que ele use, onde usamos a Função static dentro
+
+Vamos ver como exemplo o seguinte, temos o seguinte conjunto de Diretórios:
+
+<img src="../images/folders.png">
+
+Se queremos que o Express pegue todos os Arquivos dentro dele, construimos a seguinte linha de código:
+
+```javascript
+app.use(express.static("arquivos"));
+```
+
+Com essa linha ele vai pegar todos os arquivos dentro do Diretório arquivos que foram chamados nos outros arquivos, como por exemplo:
+
+```html
+<!-- Arquivo index.html -->
+
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+
+```
+
+Com esse arquivo _index.css_ no Diretório _arquivos/css/_ ele vai ser lido junto com o _index.html_ por causa das Funções do **use** e **static**
+
+
+<code style="color: red">Teste</code>
