@@ -34,3 +34,22 @@ A Engine que o Node.js já vem junto é o **V8**, que é uma Engine do Google Ch
 * utiliza-se Node.js para programas que precisam de uma **resposta em tempo real**, como Chats, Jogos e programas que tenham um fluxo rápido de muitos dados, onde com esse sistema Assíncrono se consegue receber resposta muito mais rápidas, evitando que o programa pare enquanto está lendo os processos grandes
 * Node.js possui muito boa **performance**, dessa forma é bem rápida
 * Além dessa performance, se pode utilizar o Node.js não só no **Backend(onde fica a lógica)** como no **Frontend(onde fica a visualização)** 
+
+### O que é NPM
+
+**N**ode **P**ackage **M**anager (Gerenciador de Pacotes do Node) vem junto quando instalamos o Node no computador e ele é extremamente útil quando desenvolvemos com Nodejs
+
+Com NPM podemos instalar módulos externos em nossos programas, que nos podem ajudar nos projetos e trazer novas funcionalidades, onde com ele também podemos construir um projeto que utiliza o node, onde ele constroi um Diretório com todos os Módulos instalados chamado **Node_Modules/** sendo um Diretório bem pesado devido que ele guarda vários módulos criados.
+
+* **Comandos Importantes do NPM**
+
+Como o NPM funciona pelo Terminal, existem comandos importantes utilizados para podermos instalar ou utilizar o NPM
+
+Comando|Para que serve
+|---|---|
+`npm -v`|Verificar a versão do NPM
+`npm update -g npm`| Atualiza o NPM, onde o _-g_ significa instalação global da nova versão
+`npm init`| Inicia um projeto Node no Diretório que você estiver, criando um Arquivo chamado _package.json_ com as versões dos módulos do Projeto
+`npm install <nomeModulo>`|Instala um módulo pelo seu nome, onde no caso não tem os <>, exemplo: _npm install cli-color_
+`npm install express`|Principal Framework de Desenvolvimento de projetos Web pelo Node.js
+`npm install`| Só o comando _npm install_ vai instalar todos os módulos descritos no _package.json_ no Diretório com esse arquivo, para que não precise enviar o *node_modules/* para o Repositório git
