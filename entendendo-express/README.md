@@ -93,5 +93,30 @@ app.get("/",function(req,res){
 app.listen(8080,function(){
     console.log("Servidor Rodando! \n Acesse https://localhost:8080/");
 })
-
 ```
+
+---
+
+## Enviando Página HTML usando Express
+
+Agora que fizemos nosso Hello World, iremos enviar uma Página HTML para o Browser.
+
+Primeira coisa, iremos chamar um Módulo interno do Nodejs chamado **path**:
+
+```javascript
+var path = require("path");
+```
+
+Com esse módulo podemos pegar a Constante *__dirname* que vai pegar o caminho dos Diretórios até o diretório atual que estamos trabalhando
+
+**Função sendFile**
+
+A Função sendfile do Express serve para apresentarmos um Arquivo HTML para o Browser, onde como parâmetro devemos dizer o caminho até o nosso Arquivo desejado, como no exemplo
+
+```javascript
+app.get("/",function(req,res){
+    res.sendFile(__dirname + "/index.html");
+});
+```
+
+Essa Função _sendfile_ vai enviar um arquivo estático HTML para aparecer na página definida.
